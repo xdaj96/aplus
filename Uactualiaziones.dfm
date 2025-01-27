@@ -1,0 +1,350 @@
+object Factualizaciones: TFactualizaciones
+  Left = 0
+  Top = 0
+  Caption = 'Busqueda actualizaciones'
+  ClientHeight = 579
+  ClientWidth = 801
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 3
+    Top = 0
+    Width = 415
+    Height = 190
+    TabOrder = 0
+    object Busqueda: TLabel
+      Left = 13
+      Top = 11
+      Width = 47
+      Height = 13
+      Caption = 'Busqueda'
+    end
+    object Shape1: TShape
+      Left = 2
+      Top = 27
+      Width = 410
+      Height = 1
+      Brush.Color = clBlue
+      Brush.Style = bsBDiagonal
+      Pen.Color = clSkyBlue
+    end
+    object Desde: TLabel
+      Left = 6
+      Top = 45
+      Width = 30
+      Height = 13
+      Caption = 'Desde'
+    end
+    object Hasta: TLabel
+      Left = 150
+      Top = 45
+      Width = 28
+      Height = 13
+      Caption = 'Hasta'
+    end
+    object Shape2: TShape
+      Left = 2
+      Top = 120
+      Width = 410
+      Height = 1
+      Brush.Color = clBlue
+      Brush.Style = bsBDiagonal
+      Pen.Color = clSkyBlue
+    end
+    object DateTimePicker1: TDateTimePicker
+      Left = 6
+      Top = 64
+      Width = 138
+      Height = 21
+      Date = 42660.396867094910000000
+      Time = 42660.396867094910000000
+      TabOrder = 0
+    end
+    object DateTimePicker2: TDateTimePicker
+      Left = 150
+      Top = 64
+      Width = 138
+      Height = 21
+      Date = 42660.396867094910000000
+      Time = 42660.396867094910000000
+      TabOrder = 1
+    end
+    object BitBtn1: TBitBtn
+      Left = 294
+      Top = 62
+      Width = 89
+      Height = 25
+      Caption = 'Buscar'
+      TabOrder = 2
+    end
+    object bbuscar: TBitBtn
+      Left = 294
+      Top = 141
+      Width = 101
+      Height = 25
+      Caption = 'Borrar del listado'
+      TabOrder = 3
+    end
+    object ebusqueda: TEdit
+      Left = 6
+      Top = 143
+      Width = 282
+      Height = 21
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      CharCase = ecUpperCase
+      TabOrder = 4
+    end
+  end
+  object Panel3: TPanel
+    Left = 2
+    Top = 191
+    Width = 797
+    Height = 386
+    TabOrder = 1
+    object getiquetas: TDBGrid
+      Left = 6
+      Top = 12
+      Width = 780
+      Height = 341
+      DataSource = dmFacturador.dsetiquetas
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'cod_alfabeta'
+          ReadOnly = True
+          Title.Caption = 'Alfabeta'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NRO_TROQUEL'
+          ReadOnly = True
+          Title.Caption = 'Troquel'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'COD_BARRASPRI'
+          ReadOnly = True
+          Title.Caption = 'Codigo de barras'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOM_LARGO'
+          ReadOnly = True
+          Title.Caption = 'Descripcion'
+          Width = 245
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'COD_IVA'
+          ReadOnly = True
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'CAN_STK'
+          ReadOnly = True
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'PRECIO'
+          ReadOnly = True
+          Title.Caption = 'Precio'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESCUENTO'
+          ReadOnly = True
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'PRECIO_TOTAL'
+          ReadOnly = True
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'RUBRO'
+          ReadOnly = True
+          Title.Caption = 'Rubro'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DESCUENTOOS'
+          ReadOnly = True
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'DESCUENTOCO1'
+          ReadOnly = True
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'DESCUENTOCO2'
+          ReadOnly = True
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'COD_LABORATORIO'
+          ReadOnly = True
+          Title.Caption = 'Codigo laboratorio'
+          Width = 96
+          Visible = True
+        end>
+    end
+    object Bcancelar: TBitBtn
+      Left = 6
+      Top = 357
+      Width = 97
+      Height = 25
+      Cancel = True
+      Caption = 'Cerrar'
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        1800000000000003000000000000000000000000000000000000FFFFFF5C58DA
+        2722CE2622CF2722CE2520CB2420CB241FCB2520CB251FCA251FCA2620CD231E
+        C82620CD5B56D9FFFFFF605FE12E2DFB2423EF0B06B6201DE52B29FA2824F428
+        24F42723F42722F42925FC130DCE0A05B0211AEF2921FB5D5ADE2423D6272BEF
+        1312B16A67BF1B1AB01F20E22D2EF4282AED2929EE2C2DF40E0DCA3F3CB59090
+        CE1210B12321EE201CD22C2CD4100EBB918ED3FFFFFFADAAE0100FB21C20E030
+        36F42F35F40D0DCE3835B8ECECF8FFFFFF6A67C60F0DC02B29D53034DB1D24D7
+        433DC3EBEAF8FFFFFFAFADE31D1BB91D24DE171CD73934BEEEEDF9FFFFFFACAA
+        E41F1BBD252CE72E2DD83136DC384FFA161ED43A32C5EDEDF9FFFFFFD0CEF020
+        1FC11E1DC0E2E2F6FFFFFFB3B1E81511BF232DE53241F72F30D82E34DD364FF3
+        3950F3151DD83E35CCDEDBF6FFFFFFCFCDF2CFCEF3FFFFFFD4D3F32321C7202C
+        E33447F43144F22B2FDB5056E53B55F3334BEF3852F41F2ADF211DCBCDCCF4FF
+        FFFFFFFFFFCDCBF42120CD2232E3354DF42F44EE364DF24E52E36E72EA6E82F7
+        556AF24862F32B3BE8221FD2CDCBF3FFFFFFFFFFFFCDCBF4201DD2242FE4445D
+        F35366F26A7DF66B6FE96B70EC7388F7788CF66472F1514BE0D5D2F7FFFFFFDC
+        DAF8DCDAF8FFFFFFDCDAF8655EE2575EEA7588F66F83F6686DEA6C72EE7891F7
+        6779F25550E6CAC6F6FFFFFFE9E8FC5851E65954E6E0DEFAFFFFFFF6F5FD6F69
+        E9575FEC748CF76A6FED6E76EF6F82F35E59EBC2BFF7FFFFFFF2F1FD6E66EC5D
+        68EF6472F15E57EBC5C1F8FFFFFFF1F0FD7670EC616BF16D74EF7078F15A5CEF
+        928BF3FFFFFFF1F0FE6F68F05B64EF7A92F67A91F66775F25551EDC3BFF9FFFF
+        FFAFA8F75857F06C71EF6C75F37A91F65A57F0AEA8F77771F35F68F27D96F679
+        8EF5788EF57C94F66D7FF45F5BF0948CF55956F1758BF66A73F1949BF685A1F7
+        7C94F65B5BF36975F584A1F88099F77F98F77F98F77E97F6819CF67588F55C5F
+        F37990F5819DF79399F5FFFFFF969BF8757BF57278F5757CF5737AF5737AF572
+        7AF5727AF5737AF57279F5737AF5737AF4737AF4959AF7FFFFFF}
+      ModalResult = 2
+      TabOrder = 1
+    end
+    object blimpiar: TBitBtn
+      Left = 103
+      Top = 357
+      Width = 97
+      Height = 25
+      Cancel = True
+      Caption = 'Limpiar'
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        1800000000000003000000000000000000000000000000000000FFFFFFFFFFFF
+        9C9699746D70716A6B716A6B716A6B716A6B716A6B716A6B716A6B716A6B716A
+        6D9C9699FFFFFFFFFFFFFFFFFFFFFFFF776C70A2AFA5A2AFA5A2AFA5A2AFA5A2
+        AFA5A2AFA5A2AFA5A2AFA5A2AFA5A2AFA5796E72FFFFFFFFFFFFFFFFFFFFFFFF
+        837B7FC9C5C7008036278E5236945CA9BEAF9BB9A5008036008036008036C9C5
+        C7837B7FFFFFFFFFFFFFFFFFFFC5C0C2A19B9CE8E6E604904248A872E0DFDDE0
+        DFDDE0DFDDE0DFDD64B286049042E8E6E6A19B9CDDDADBFFFFFFFFFFFFACA5A8
+        C9C5C7F0EEED84D6AF26A863E1E8E3F0EEEDF0EEEDE1E8E317A35984D6AFF0EE
+        EDC9C5C7BFBABCFFFFFFFFFFFF91888CE8E6E6FCFBF9EDF5F0FCFBF9EDF5F0FC
+        FBF9FCFBF9DDF1E6EDF5F0DFF1E6FCFBF9E8E6E69F979BFFFFFFFFFFFF7E7478
+        FFFEFEFFFEFEFFFEFEFFFEFE0BAF60B3E6CCB3E6CC0BAF60FFFEFEFFFEFEFFFE
+        FEFFFEFE887E82FFFFFFFFFFFF877F83F0EEEDF0EEEDF0EEEDF0EEED23AD6C64
+        B28664B28615A963E0E8E3F0EEEDF0EEEDF0EEED8C8488FFFFFFFFFFFF9F9598
+        DDDCDADDDCDADDDCDADDDCDADDDCDA019750019750DDDCDADDDCDADDDCDADDDC
+        DADDDCDA9F9598FFFFFFFFFFFFAAA2A5CBC8C7CBC8C7CBC8C7CBC8C7CBC8C7CB
+        C8C7CBC8C7CBC8C7CBC8C7CBC8C7CBC8C7CBC8C7AAA2A5FFFFFF186B1D0A791C
+        0A791C0A791C0A791C0A791C0A791C0A791C0A791C0A791C0A791C0A791C0A79
+        1C0A791C0A791C136A181F8B3635C06435C06435C06435C06435C06435C06435
+        C06435C06435C06435C06435C06435C06435C06435C0640D8326229B4541D48E
+        41D48E41D48E41D48E41D48E41D48E41D48E41D48E41D48E41D48E41D48E41D4
+        8E41D48E41D48E0E94372D9A47239E4D1C96461A9040178B3C16873915863815
+        863815863815863816883A178B3C1A90411C96461F9C4B219740FFFFFF55985A
+        096F15086A14086512076311076211076211076211076211076412086713096B
+        14096F1546914CFFFFFFFFFFFFFFFFFF6CAC73388E42167B220A74170A74170A
+        74170A74170A74170A74171C7E2842944C76B27DFFFFFFFFFFFF}
+      TabOrder = 2
+    end
+  end
+  object Panel2: TPanel
+    Left = 419
+    Top = 1
+    Width = 380
+    Height = 189
+    TabOrder = 2
+    object rimpresion: TRadioGroup
+      Left = 13
+      Top = 27
+      Width = 356
+      Height = 126
+      Caption = 'Impresion'
+      ItemIndex = 0
+      Items.Strings = (
+        'Impresora Etiquetas'
+        'Impresora Comun')
+      TabOrder = 0
+    end
+    object Bimprimir: TBitBtn
+      Left = 261
+      Top = 159
+      Width = 100
+      Height = 25
+      Caption = 'Imprimir'
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        1800000000000003000000000000000000000000000000000000FFFFFFFFFFFF
+        FFFFFFFFFFFFD7C39BECE3D6ECE3D6ECE3D6ECE3D6ECE3D6ECE3D6D7C39BFFFF
+        FFFFFFFFFFFFFFFFFFFFB0ACACB1ACACA7A2A2726C73C4AB7FEDE1D5EDE1D5ED
+        E1D5EDE1D5EDE1D5EDE1D5C4AB7F767177A49E9EA9A4A4ABA5A5958F8FC3C0BF
+        C3C0BF837D84C6A874E0CBAEE0CBAEE0CBAEE0CBAEE0CBAEE0CBAEC6A874837D
+        84C3C0BFC3C0BF999292A49FA1D1CFCED1CFCED3D2D1D2D2D3D0D0D2D0D0D2D0
+        D0D2D0D0D2D0D0D2D0D0D2D2D2D3D3D2D1BACAD76E9BE3A49FA1AAA7A7D9D7D7
+        D9D7D7D9D7D7D9D7D7D9D7D7D9D7D7D9D7D7D9D7D7D9D7D7D9D7D7D9D7D7D9D7
+        D78AC3E9004BFBABA8A8B7B3B3E6E8E9D6C5AFBC6B10BB6A0FBB6A0FBB6A0FBB
+        6A0FBB6A0FBB6A0FBB6A0FBB6A0FBC6B10D6C5AFE6E8E9B8B5B5BCB9BAEEF2F5
+        BA7B3EE1A942E1A842E1A842E1A842E1A842E1A842E1A842E1A842E1A842E1A9
+        42BA7B3EEEF2F5BFBBBCCDC8C9F8FCFFCD9753EEC670EEC771EEC771EEC771EE
+        C771EEC771EEC771EEC771EEC771EEC670CD9753F8FCFFCECBCCD2D0D0FCFFFF
+        D7A55CEDC977E9BF68E9BF68E9BF68E9BF68E9BF68E9BF68E9BF68E9BF68EDC9
+        77D7A55CFCFFFFD4D1D0DEDCDBFFFFFFE8C070E0AC54B99D6BD7BD91D7BD91D7
+        BD91D7BD91D7BD91D7BD91B99D6BE0AC54E8C070FFFFFFE3DFDFD1CBCDBCBBC0
+        DEB673CF9E5FC4AB7FDFCAADDFCAADDFCAADDFCAADDFCAADDFCAADC4AB7FCD99
+        56DDB36EBEBDC1D1CACCFFFFFFFFFFFFFFFFFFFFFFFFD0BD98ECDFD1ECDFD1EC
+        DFD1ECDFD1ECDFD1ECDFD1D0BD98FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFD5C4A4EFE4D8EFE4D8EFE4D8EFE4D8EFE4D8EFE4D8D5C4A4FFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDED0B8F5EDE4F5EDE4F5
+        EDE4F5EDE4F5EDE4F5EDE4DED0B8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFE2D6C1F8F3EAF8F3EAF8F3EAF8F3EAF8F3EAF8F3EAE2D6C1FFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE7DDCDEFE8DBEFE8DBEF
+        E8DBEFE8DBEFE8DBEFE8DBE8DFD0FFFFFFFFFFFFFFFFFFFFFFFF}
+      TabOrder = 1
+    end
+  end
+end

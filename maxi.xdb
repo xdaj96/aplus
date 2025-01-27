@@ -1,0 +1,203 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xdb="http://www.borland.com/schemas/delphi/10.0/XMLDataBinding">
+	<xs:element name="MensajeADESFA">
+		<xs:complexType>
+			<xs:annotation>
+        <xs:appinfo xdb:docElement="MensajeADESFA"/>
+      </xs:annotation>
+      <xs:sequence>
+				<xs:element name="EncabezadoMensaje">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:short" name="TipoMsj"/>
+							<xs:element type="xs:int" name="CodAccion"/>
+							<xs:element type="xs:int" name="IdMsj"/>
+							<xs:element name="InicioTrx">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:int" name="Fecha"/>
+										<xs:element type="xs:int" name="Hora"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Terminal">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="Tipo"/>
+										<xs:element type="xs:byte" name="Numero"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Software">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="Nombre"/>
+										<xs:element type="xs:string" name="Version"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Validador">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="Nombre"/>
+										<xs:element type="xs:string" name="Version"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:float" name="VersionMsj"/>
+							<xs:element name="Prestador">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="Cuit"/>
+										<xs:element type="xs:string" name="Sucursal"/>
+										<xs:element type="xs:string" name="RazonSocial"/>
+										<xs:element type="xs:long" name="Codigo"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:string" name="SetCaracteres"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="EncabezadoReceta">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Prescriptor">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="Apellido"/>
+										<xs:element type="xs:string" name="Nombre"/>
+										<xs:element type="xs:string" name="TipoMatricula"/>
+										<xs:element type="xs:string" name="Provincia"/>
+										<xs:element type="xs:short" name="NroMatricula"/>
+										<xs:element type="xs:string" name="TipoPrescriptor"/>
+										<xs:element type="xs:string" name="Cuit"/>
+										<xs:element type="xs:string" name="Especialidad"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Beneficiario">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="TipoDoc"/>
+										<xs:element type="xs:string" name="NroDoc"/>
+										<xs:element type="xs:string" name="Apellido"/>
+										<xs:element type="xs:string" name="Nombre"/>
+										<xs:element type="xs:string" name="Sexo"/>
+										<xs:element type="xs:string" name="FechaNacimiento"/>
+										<xs:element type="xs:string" name="Parentesco"/>
+										<xs:element type="xs:string" name="EdadUnidad"/>
+										<xs:element type="xs:byte" name="Edad"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Financiador">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:byte" name="Codigo"/>
+										<xs:element type="xs:string" name="Cuit"/>
+										<xs:element type="xs:string" name="Sucursal"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Credencial">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:long" name="Numero"/>
+										<xs:element type="xs:string" name="Track"/>
+										<xs:element type="xs:string" name="Version"/>
+										<xs:element type="xs:string" name="Vencimiento"/>
+										<xs:element type="xs:string" name="ModoIngreso"/>
+										<xs:element type="xs:string" name="EsProvisorio"/>
+										<xs:element type="xs:byte" name="Plan"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:string" name="CoberturaEspecial"/>
+							<xs:element name="Preautorizacion">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="Codigo"/>
+										<xs:element type="xs:string" name="Fecha"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:int" name="FechaReceta"/>
+							<xs:element name="Dispensa">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:int" name="Fecha"/>
+										<xs:element type="xs:int" name="Hora"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Formulario">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:int" name="Fecha"/>
+										<xs:element type="xs:string" name="Tipo"/>
+										<xs:element type="xs:long" name="Numero"/>
+										<xs:element type="xs:string" name="Serie"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:string" name="TipoTratamiento"/>
+							<xs:element type="xs:string" name="Diagnostico"/>
+							<xs:element name="Institucion">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="Codigo"/>
+										<xs:element type="xs:string" name="Cuit"/>
+										<xs:element type="xs:string" name="Sucursal"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Retira">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="Apellido"/>
+										<xs:element type="xs:string" name="Nombre"/>
+										<xs:element type="xs:string" name="TipoDoc"/>
+										<xs:element type="xs:string" name="NroDoc"/>
+										<xs:element type="xs:string" name="NroTelefono"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DetalleReceta">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Item">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:byte" name="NroItem"/>
+										<xs:element type="xs:long" name="CodBarras"/>
+										<xs:element type="xs:int" name="CodTroquel"/>
+										<xs:element type="xs:string" name="Alfabeta"/>
+										<xs:element type="xs:string" name="Kairos"/>
+										<xs:element type="xs:string" name="Codigo"/>
+										<xs:element type="xs:float" name="ImporteUnitario"/>
+										<xs:element type="xs:byte" name="CantidadSolicitada"/>
+										<xs:element type="xs:float" name="PorcentajeCobertura"/>
+										<xs:element type="xs:string" name="CodPreautorizacion"/>
+										<xs:element type="xs:float" name="ImporteCobertura"/>
+										<xs:element type="xs:byte" name="ExcepcionPrescripcion"/>
+										<xs:element type="xs:string" name="Diagnostico"/>
+										<xs:element type="xs:string" name="DosisDiaria"/>
+										<xs:element type="xs:string" name="DiasTratamiento"/>
+										<xs:element type="xs:string" name="Generico"/>
+										<xs:element type="xs:string" name="CodConflicto"/>
+										<xs:element type="xs:string" name="CodIntervencion"/>
+										<xs:element type="xs:string" name="CodAccion"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute type="xs:float" name="version"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
