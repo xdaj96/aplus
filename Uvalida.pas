@@ -198,9 +198,26 @@ begin
       // Ponemos el elemento terminal dentro de cabecera
       Terminal := NCabecera.AddChild( 'Terminal' );
       nodo:= terminal.AddChild('Tipo');
-      nodo.Text:='PC'; //TIPO DE TERMINAL  ------------------------------------------------LO CAMBIE CONEXIA
+      nodo.Text:='';
+       // Si valida por seros no lleva tipo de terminal
+      IF (TICKET.codigo_validador <> 'Y')   THEN
+       BEGIN
+          nodo.Text:='PC'; //TIPO DE TERMINAL  ------------------------------------------------LO CAMBIE CONEXIA
+
+       END;
+
+
       nodo:= terminal.AddChild('Numero');
       nodo.Text:='001'; // numero de la terminal;
+
+        // Si valida por seros lleva la terminal 4
+      IF (TICKET.codigo_validador = 'Y')   THEN
+       BEGIN
+          nodo.Text:='04'; //TIPO DE TERMINAL  ------------------------------------------------LO CAMBIE CONEXIA
+
+       END;
+
+
       software := NCabecera.AddChild( 'Software' );
       nodo:= software.AddChild('Nombre');
   //    nodo.Text:='aPlus';
@@ -234,7 +251,7 @@ begin
       Nodo := NCabecera.AddChild( 'VersionMsj' );
       nodo.Text:='2.0'
       end;
-      IF (TICKET.codigo_validador<>'S') THEN
+      IF ((TICKET.codigo_validador<>'S') and (TICKET.codigo_validador<>'Y'))  THEN
       BEGIN
       Nodo := NCabecera.AddChild( 'VersionMsj' );
       nodo.Text:='1.1';
@@ -257,12 +274,31 @@ begin
 
       nodo:=prestador.AddChild('Sucursal');
       nodo.Text:='';
+
+      // Si valida por seros le asignamos la sucursal 01
+      IF (TICKET.codigo_validador='Y')   THEN
+       BEGIN
+          nodo.Text:='01';
+       END;
+
+
+
+
       nodo:=prestador.AddChild('RazonSocial');
       nodo.Text:='';
       nodo:=prestador.AddChild('Codigo');
       nodo.Text:=TICKET.codigoos_prestador;
       Nodo := NCabecera.AddChild( 'SetCaracteres' );
       nodo.Text:='ISO-8859-1';
+
+       // Si valida por seros le asignamos  ASCII
+      IF (TICKET.codigo_validador='Y')   THEN
+       BEGIN
+          nodo.Text:='ASCII';
+       END;
+
+
+
 
       // Ponemos el elemento: ENCABEZADO RECETA //
       NDatosFinales := NMensajeFacturacion.AddChild( 'EncabezadoReceta' );
@@ -302,6 +338,15 @@ begin
       beneficiario := ndatosfinales.AddChild( 'Beneficiario' );
       Nodo := beneficiario.AddChild( 'TipoDoc' );
       Nodo.Text := 'DNI';
+
+       // Si valida por seros le asignamos el documento 96
+      IF (TICKET.codigo_validador='Y')   THEN
+       BEGIN
+          nodo.Text:='96';
+       END;
+
+
+
       Nodo := beneficiario.AddChild( 'NroDoc' );
       Nodo.Text := ticket.documento;                                                 //////////hasta aqui llegue hoy23/06/2016
       Nodo := beneficiario.AddChild( 'Apellido' );
@@ -325,6 +370,15 @@ begin
       Nodo.Text := ticket.codigoos_validador;//codigo os...
       Nodo := financiador.AddChild( 'Cuit' );
       Nodo.Text := '';
+
+      // Si valida por seros le asignamos la cuit de sucursal
+      IF (TICKET.codigo_validador='Y')   THEN
+       BEGIN
+          nodo.Text:='30999222907';
+       END;
+
+
+
       Nodo := financiador.AddChild( 'Sucursal' );
       Nodo.Text := '';
 
